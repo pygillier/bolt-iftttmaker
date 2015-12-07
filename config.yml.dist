@@ -1,0 +1,14 @@
+# IFTTT maker plugin
+#
+# Channel key (get yours at https://ifttt.com/maker) 
+
+channel_key: 
+event_name: 
+
+# Content types which will trigger channel
+content_types:
+ - entries
+ - pages
+
+# Service URL (do not modify)
+channel_url : https://maker.ifttt.com
