@@ -1,5 +1,5 @@
 {
-    "name": "pygilllier/iftttmaker",
+    "name": "pygillier/iftttmaker",
     "description": "Add IFTTT maker channel access to Bolt.",
     "type": "bolt-extension",
     "keywords" : [ "ifttt", "maker", "channel" ],
