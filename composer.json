@@ -13,7 +13,7 @@
             "email": "hello@pygillier.me"
         }
     ],
-	"minimum-stability" : "dev",
+	"minimum-stability" : "stable",
 	"prefer-stable" : true,
     "autoload": {
         "files": [
