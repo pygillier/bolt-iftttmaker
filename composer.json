@@ -20,7 +20,7 @@
             "init.php"
         ],
         "psr-4": {
-            "Bolt\\Extension\\pygillier\\IftttMaker\\": "src",
+            "Bolt\\Extension\\pygillier\\IftttMaker\\": "",
             "Bolt\\Extension\\pygillier\\IftttMaker\\Tests\\": "tests"
         }
     },
