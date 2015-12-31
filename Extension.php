@@ -32,15 +32,14 @@ class Extension extends BaseExtension
     
     /**
      * Stores status of previous version of object.
+     *
+     * Status parameter must be set to retrieve content even if not published yet.
      */
     public function preSaveCallback(\Bolt\Events\StorageEvent $event)
     {
-        $this->old_status = $this->app['storage']->getContentObject(
-            $event->getContentType(), 
-            array(
-                'id' => $event->getId()
-            )
-        )->get('status');
+        $this->old_status = $this->app['storage']
+            ->getContent($event->getContentType(), array('id' => $event->getId(), 'status' => '!undefined'))
+            ->get('status');
     }
 
     /**
