@@ -37,9 +37,13 @@ class Extension extends BaseExtension
      */
     public function preSaveCallback(\Bolt\Events\StorageEvent $event)
     {
-        $this->old_status = $this->app['storage']
-            ->getContent($event->getContentType(), array('id' => $event->getId(), 'status' => '!undefined'))
-            ->get('status');
+        $content = $this->app['storage']->getContent($event->getContentType(), array('id' => $event->getId(), 'status' => '!undefined'));
+        
+        // First-time save control
+        if($content)
+            $this->old_status = $content->get('status');
+        else
+            $this->old_status = "new";
     }
 
     /**
